@@ -1,0 +1,11 @@
+{
+  "name": "meertensinstituut/xml-rpc",
+  "autoload": {
+    "files": ["lib/XML_RPC/XML/constants_globals_functions.php", "lib/XML_RPC/XML/system_describeMethods.php"],
+    "classmap": ["lib/XML_RPC/XML", "lib/XML_RPC/XML/RPC"]
+  },
+  "require": {
+    "php": ">=8.1",
+    "pear/pear-core-minimal": "^1.10.1"
+  }
+}
