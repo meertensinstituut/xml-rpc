@@ -1,7 +1,7 @@
 {
   "name": "meertensinstituut/xml-rpc",
   "description": "PHP 8-compatible version of PEAR XML_RPC library",
-  "license": "PHP License",
+  "license": "PHP-3.01",
   "autoload": {
     "files": ["lib/XML_RPC/XML/constants_globals_functions.php", "lib/XML_RPC/XML/system_describeMethods.php"],
     "classmap": ["lib/XML_RPC/XML", "lib/XML_RPC/XML/RPC"]
