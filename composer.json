@@ -7,7 +7,7 @@
     "classmap": ["lib/XML_RPC/XML", "lib/XML_RPC/XML/RPC"]
   },
   "require": {
-    "php": ">=8.1",
+    "php": ">=5.6",
     "pear/pear-core-minimal": "^1.10.1"
   }
 }
