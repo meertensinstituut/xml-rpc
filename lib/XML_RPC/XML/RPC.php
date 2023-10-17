@@ -921,7 +921,11 @@ class XML_RPC_Message extends XML_RPC_Base
 
         $encoding = $this->getEncoding($data);
         $parser_resource = xml_parser_create($encoding);
-        $parser = strlen(get_class($parser_resource));
+        if (is_resource($parser_resource)) {
+            $parser = (int) $parser_resource;
+        } else {
+            $parser = strlen(get_class($parser_resource));
+        }
 
         $XML_RPC_xh = array();
         $XML_RPC_xh[$parser] = array();

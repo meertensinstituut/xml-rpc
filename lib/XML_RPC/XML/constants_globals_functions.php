@@ -240,7 +240,11 @@ function XML_RPC_se($parser_resource, $name, $attrs)
 {
     global $XML_RPC_xh, $XML_RPC_valid_parents;
 
-    $parser = strlen(get_class($parser_resource));
+    if (is_resource($parser_resource)) {
+        $parser = (int) $parser_resource;
+    } else {
+        $parser = strlen(get_class($parser_resource));
+    }
 
     // if invalid xmlrpc already detected, skip all processing
     if ($XML_RPC_xh[$parser]['isf'] >= 2) {
@@ -369,7 +373,11 @@ function XML_RPC_ee($parser_resource, $name)
 {
     global $XML_RPC_xh;
 
-    $parser = strlen(get_class($parser_resource));
+    if (is_resource($parser_resource)) {
+        $parser = (int) $parser_resource;
+    } else {
+        $parser = strlen(get_class($parser_resource));
+    }
 
     if ($XML_RPC_xh[$parser]['isf'] >= 2) {
         return;
@@ -506,7 +514,11 @@ function XML_RPC_cd($parser_resource, $data)
 {
     global $XML_RPC_xh, $XML_RPC_backslash;
 
-    $parser = strlen(get_class($parser_resource));
+    if (is_resource($parser_resource)) {
+        $parser = (int) $parser_resource;
+    } else {
+        $parser = strlen(get_class($parser_resource));
+    }
 
     if ($XML_RPC_xh[$parser]['lv'] != 3) {
         // "lookforvalue==3" means that we've found an entire value
